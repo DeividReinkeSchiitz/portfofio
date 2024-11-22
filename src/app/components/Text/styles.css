@@ -1,0 +1,10 @@
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* change color text inside div */
+p span {
+    @apply text-[var(--blue)];
+}
