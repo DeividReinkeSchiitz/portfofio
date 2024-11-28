@@ -16,6 +16,24 @@
   }
 }
 
+* {
+  margin:0;
+  padding:0;
+
+  box-sizing:border-box
+}
+
+html, body{
+  height:100%;
+  width:100%;
+  overflow-x:hidden;
+}
+
+/*html body p {*/
+/*  pointer-events: auto;*/
+/*}*/
+
+
 body {
   color: var(--foreground);
   background: var(--background);

@@ -9,39 +9,38 @@ interface HeaderProps {
 
 function Header({className, style}: HeaderProps) {
     const HoverText = ({children}: { children: React.ReactNode }) => {
-        return <Text
-            className={`hover:cursor-pointer hover:shadow-lg hover:scale-105 font-normal hover:transform transition-transform duration-300 ease-in-out`}>{children}</Text>
+        return <Text hover className={"sm:text-xl sm:p-2"} >{children}</Text>
     }
 
     return (
-        <div className={`flex text-white sm:text-lg text-sm p-8 justify-center ${className}`} style={style}>
+        <div className={`flex text-white p-8 justify-center ${className}`} style={style}>
             <div className="flex w-full pt-3 pb-3 max-w-2xl items-center border-[#fafafa] border-[1px] rounded-2xl justify-evenly
             ">
-                <HoverText>
+                <Text hover className={"sm:text-xl sm:p-2"}>
                     <Link href={"/"}>
                         Home
                     </Link>
-                </HoverText>
-                <HoverText>
+                </Text>
+                <Text hover className={"sm:text-xl sm:p-2"}>
                     <Link href={"/Websites"}>
                         Websites
                     </Link>
-                </HoverText>
-                <HoverText>
+                </Text>
+                <Text hover className={"sm:text-xl sm:p-2"}>
                     <Link href={"/Mobiles"}>
                         Mobiles
                     </Link>
-                </HoverText>
-                <HoverText>
+                </Text>
+                <Text hover className={"sm:text-xl sm:p-2"}>
                     <Link href={"/Others"}>
                         Others
                     </Link>
-                </HoverText>
-                <HoverText>
+                </Text>
+                <Text hover className={"sm:text-xl sm:p-2"}>
                     <Link href={"/Contact"}>
                         Contact
                     </Link>
-                </HoverText>
+                </Text>
             </div>
         </div>
     )

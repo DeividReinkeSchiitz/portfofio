@@ -1,18 +1,54 @@
-const NUM_SQUARES = 100;
+"use client";
+import {useState, useEffect} from "react";
+
 function SquaresBack() {
+    const [hoveredSquareIndex, setHoveredSquareIndex] = useState<number | null>(null);
+
+    const handleMouseMove = (event: MouseEvent) => {
+        const squares = document.querySelectorAll(".square");
+        for (let i = 0; i < squares.length; i++) {
+            const square = squares[i] as HTMLElement;
+            const rect = square.getBoundingClientRect();
+            const isInside =
+                event.clientX >= rect.left &&
+                event.clientX <= rect.right &&
+                event.clientY >= rect.top &&
+                event.clientY <= rect.bottom;
+
+            if (isInside) {
+                setHoveredSquareIndex(i);
+                return;
+            }
+        }
+        setHoveredSquareIndex(null); // Reset if mouse is not over any square
+    };
+
+    useEffect(() => {
+        window.addEventListener("mousemove", handleMouseMove);
+
+        return () => {
+            window.removeEventListener("mousemove", handleMouseMove);
+        };
+    }, []);
+
     const squares = [];
-    for (let i = 0; i < NUM_SQUARES; i++) {
+    for (let i = 0; i < 100; i++) {
         squares.push(
-            <div key={i} className="border-b border-r border-gray-800 border-opacity-50 z-0"/>
+            <div
+                key={i}
+                id={`black-square-${i}`}
+                className={`square border-b border-r bg-background border-gray-800 border-opacity-50  ${
+                    hoveredSquareIndex === i ? "border-t border-l hover:transform bg-[#0a0b0b] scale-105 transition-transform duration-300 ease-in-out" : ""
+                }`}
+            />
         );
     }
 
     return (
-        <div className="absolute grid grid-cols-10 w-full h-screen z-1 ">
+        <div className="absolute grid grid-cols-10 w-full h-screen z-0 inset-0">
             {squares}
         </div>
-    )
-
+    );
 }
 
 export default SquaresBack;

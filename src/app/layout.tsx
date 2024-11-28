@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import SquaresBack from "@/app/components/SquaresBack";
 import Header from "@/app/components/Header";
+import React from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,9 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${raleway.variable} antialiased`}>
+      <body className={`${raleway.variable} ${geistSans.variable} ${geistMono.variable} antialiased `}>
         <SquaresBack />
-        <div className={`z-2 relative w-full h-[100vh] flex flex-col`}>
+        <div className={`z-10 relative flex flex-col h-full w-full`}>
           <Header/>
           {children}
         </div>

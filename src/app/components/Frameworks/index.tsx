@@ -1,9 +1,11 @@
-import React, {useEffect} from 'react'
-import {root as static_data} from "../../../../public/static"
+import React from 'react'
+import getStaticData from "@/../public/static"
 import Image from 'next/image'
 import Text from "@/app/components/Text";
 
-function Frameworks() {
+async function Frameworks() {
+    const static_data = await getStaticData()
+
     const cur_frameworks = []
 
     for (let i = 0; i < static_data.frameworks.length; i++) {
@@ -28,7 +30,7 @@ function Frameworks() {
 
 
     return (
-        <div className="grid md:grid-cols-4 gap-x-12 gap-y-7 mt-16 grid-cols-2 p-5 mb-10 ">
+        <div className="grid md:grid-cols-4 gap-x-12 gap-y-7 grid-cols-2 p-5 mb-10 ">
             {cur_frameworks}
         </div>
     )
