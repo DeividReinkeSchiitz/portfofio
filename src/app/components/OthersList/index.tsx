@@ -2,6 +2,7 @@ import React from 'react'
 import getStaticData from "@/../public/static"
 import Image from 'next/image'
 import Text from "@/app/components/Text";
+import ClientDiv from "@/app/components/ClientDiv";
 
 
 function OthersStacks({stacks}: { stacks: string[] }) {
@@ -28,27 +29,27 @@ async function OthersList() {
             <div key={i} className={`flex flex-col max-w-[518px] p-10          
             `}>
                 {/* IMAGE SIDE  */}
-                    {/*Image*/}
-                    <Image
-                        width={518}
-                        height={317}
-                        src={static_data.others[i].image} alt={static_data.others[i].name}
-                        className={"h-auto w-auto"}
-                    />
+                {/*Image*/}
+                <Image
+                    width={518}
+                    height={317}
+                    src={static_data.others[i].image} alt={static_data.others[i].name}
+                    className={"h-auto w-auto"}
+                />
 
-                    {/*Link text*/}
-                    {/*<div className={`flex w-full justify-evenly z-10 `}>*/}
-                    {/*    <Text className={`flex justify-center items-center hover:underline`} hover>*/}
-                    {/*        <Image src={"globe.svg"} alt={"globe"} width={5} height={5}*/}
-                    {/*               className={"mr-2 w-5 h-5 md:w-7 md:h-7 "}/>*/}
-                    {/*        Live Demo*/}
-                    {/*    </Text>*/}
-                    {/*    <Text className={`flex justify-center items-center hover:underline p-5`} hover>*/}
-                    {/*        <Image src={"github.svg"} alt={"github"} width={6} height={6}*/}
-                    {/*               className={"mr-2 w-6 h-6 md:w-7 md:h-7 "}/>*/}
-                    {/*        Github*/}
-                    {/*    </Text>*/}
-                    {/*</div>*/}
+                {/*Link text*/}
+                {/*<div className={`flex w-full justify-evenly z-10 `}>*/}
+                {/*    <Text className={`flex justify-center items-center hover:underline`} hover>*/}
+                {/*        <Image src={"globe.svg"} alt={"globe"} width={5} height={5}*/}
+                {/*               className={"mr-2 w-5 h-5 md:w-7 md:h-7 "}/>*/}
+                {/*        Live Demo*/}
+                {/*    </Text>*/}
+                {/*    <Text className={`flex justify-center items-center hover:underline p-5`} hover>*/}
+                {/*        <Image src={"github.svg"} alt={"github"} width={6} height={6}*/}
+                {/*               className={"mr-2 w-6 h-6 md:w-7 md:h-7 "}/>*/}
+                {/*        Github*/}
+                {/*    </Text>*/}
+                {/*</div>*/}
 
                 {/*  TEXT SIDE  */}
                 <div className={`flex flex-col h-full items-baseline mt-8`}>
@@ -56,16 +57,30 @@ async function OthersList() {
                     <div className={`flex w-full justify-between z-10 `}>
                         <Text className={`text-2xl font-bold`}> {static_data.others[i].name}</Text>
                         <div className={`flex justify-between gap-x-10 items-center`}>
-                            <Text className={`flex justify-center items-center hover:underline`} hover>
-                                <Image src={"globe.svg"} alt={"globe"} width={5} height={5}
-                                       className={"mr-2 w-5 h-5 md:w-7 md:h-7 "}/>
-                                Live Demo
-                            </Text>
-                            <Text className={`flex justify-center items-center hover:underline `} hover>
-                                <Image src={"github.svg"} alt={"github"} width={6} height={6}
-                                       className={"mr-2 w-6 h-6 md:w-7 md:h-7 "}/>
-                                Github
-                            </Text>
+                            {
+                                static_data.others[i].live &&
+                                <ClientDiv open={static_data.others[i].live}>
+                                    <Text className={`flex justify-center items-center hover:underline`}
+                                          hover>
+                                        <Image src={"globe.svg"} alt={"globe"} width={5} height={5}
+                                               className={"mr-2 w-4 h-4 md:w-5 md:h-5 "}/>
+                                        Live Demo
+                                    </Text>
+                                </ClientDiv>
+                            }
+
+                            {
+                                static_data.others[i].github &&
+                                <ClientDiv open={static_data.others[i].github}>
+                                    <Text className={`flex justify-center items-center hover:underline `}
+                                          hover>
+                                        <Image src={"github.svg"} alt={"github"} width={6} height={6}
+                                               className={"mr-2 w-6 h-6 md:w-6 md:h-6 "}/>
+                                        Github
+                                    </Text>
+                                </ClientDiv>
+                            }
+
                         </div>
                     </div>
 
@@ -79,14 +94,14 @@ async function OthersList() {
     }
 
     // if number of projects is odd the add one empty div
-    if (static_data.others.length % 2 !== 0) {
-        cur_projects.push(
-            <div key={-1} className={`flex flex-col w-[518px] p-10 `}/>
-        )
-    }
+    // if (static_data.others.length > 1 && static_data.others.length % 2 !== 0) {
+    //     cur_projects.push(
+    //         <div key={-1} className={`flex flex-col w-[518px] p-10 `}/>
+    //     )
+    // }
 
     return (
-        <div className="flex items-center mt-20 flex-wrap justify-center max-w2xl ">
+        <div className="flex items-center mt-20 flex-wrap justify-center max-w-screen-xl  ">
             {cur_projects}
         </div>
     )

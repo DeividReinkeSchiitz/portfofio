@@ -14,7 +14,7 @@ function Text ({children, className, hover, ...rest}: TextProps) {
         ${hover && "hover:cursor-pointer hover:shadow-lg hover:scale-105 font-normal hover:transform transition-transform duration-300 ease-in-out"} 
         ${className}`}
         {...rest}
-    >
+        >
         {children}
     </p>
 }

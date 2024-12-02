@@ -12,7 +12,7 @@ export default function Home() {
                 <span>Deivid Reinke Schiitz</span>
               </Text>
 
-              <Text className="!text-4xl text-center md:text-6xl font-bold">
+              <Text className=" md:!text-6xl !text-4xl text-center font-bold">
                   From <span> powerful </span> Backends <br/>
                   to intuitive <span>solutions</span><br/>
                   <span>&</span> Mobile Apps <span>&</span><br/>
@@ -23,9 +23,7 @@ export default function Home() {
               <DownResume className={""}/>
           </div>
 
-
-
-      {/*  FRAMEWORKS  */}
+          {/*  FRAMEWORKS  */}
           <Frameworks/>
       </div>
   );

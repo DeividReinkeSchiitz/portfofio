@@ -18,7 +18,7 @@ export default function Websites() {
                   />
               </div>
 
-              <Text className={`text-center sm:text-xl mt-2  ml-10 mr-10 font-medium`}>
+              <Text className={`text-center sm:text-xl mt-2  ml-10 mr-10 font-normal`}>
                   I’ve created templates and little projects that truly <br/>
                   spark my curiosity. Here are a few of my all-time <br/>
                   favorites that I’m proud to share!

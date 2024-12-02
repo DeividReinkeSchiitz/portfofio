@@ -5,7 +5,7 @@ import phone_svg from "@/../public/phone.svg";
 import battery_svg from "@/../public/battery.svg";
 import OthersList from "@/app/components/OthersList";
 
-export default function Websites() {
+export default function Others() {
   return (
       <div className="flex flex-col items-center text-center justify-center ">
           {/* TITLE */}
@@ -30,15 +30,13 @@ export default function Websites() {
               </div>
 
               <Text className={`text-center sm:text-xl mt-2 ml-10 mr-10 font-medium`}>
-                  I&#39;ve built websites using anything from React, <br/>
-                  Firebase and Node.js, Here are some of my favorite <br/>
-                  projects over the course of my journey.
+                  I&#39;ve created <span>templates</span> and backend projects<br/>
+                  that truly <span>spark</span>my curiosity.Here are a few of my all-time<br/>
+                  favorites that I’m proud to share!
               </Text>
           </div>
 
-
           <OthersList/>
-
       </div>
   );
 }

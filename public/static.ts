@@ -5,6 +5,7 @@ export interface Root {
     websites: Website[]
     mobiles: Mobile[]
     others: Other[]
+    social_medias: SocialMedia[]
 }
 
 export interface Framework {
@@ -43,6 +44,15 @@ export interface Other {
     description: string
     image: string
     stacks: string[]
+    live: string
+    github: string
+}
+
+export interface SocialMedia {
+    name: string
+    description: string
+    icon: string
+    link: string
 }
 
 export default async function getStaticData() {
@@ -133,7 +143,7 @@ export default async function getStaticData() {
                 name: "Portfolio",
                 description: "My personal developer portfolio, designed to showcase my <span>projects</span> and the technologies I <span>specialize </span>in.",
                 image: "portfolio.svg",
-                live: "schiitz.com",
+                live: "https://schiitz.com",
                 github: "https://github.com/DeividReinkeSchiitz/portpofio",
                 stacks: [
                     {
@@ -199,9 +209,11 @@ export default async function getStaticData() {
         mobiles: [
             {
                 name: "Qacademic",
-                description: "Mobile App made to visualize grades and download  class material by high school students from a Federal Institute in Brazil. The server was made Web Scrapping the official website from the Institution.",
+                description: "Mobile <span>App</span> made to visualize grades and download class material by high school " +
+                    "students from a Federal Institute in Brazil. The <span>server</span> was made " +
+                    "<span>Web Scrapping </span>the official website from the Institution.",
                 icon: "qacademic_icon.svg",
-                images: ["qacademic1.png", "qacademic2.png"],
+                images: ["/qacademic1.svg", "/qacademic2.svg", "/qacademic3.svg"],
                 github: "https://github.com/DeividReinkeSchiitz/Qacademic",
                 stacks: [
                     {
@@ -238,9 +250,13 @@ export default async function getStaticData() {
             },
             {
                 name: "Pill DIspenser",
-                description: "The Pill Dispenser Medication App is a server-side project built on a real-time Firebase backend. It is designed to integrate seamlessly with hardware dispensers powered by ESP32, Arduino, or ARM processors, ensuring efficient and reliable medication management.",
+                description: "The Pill Dispenser Medication App is a <span>server-side</span> project built on a" +
+                    "<span> real-time Firebase backend </span>. It is designed to integrate " +
+                    "seamlessly with <span>hardware</span> dispensers powered by" +
+                    " ESP32, Arduino, or ARM processors, ensuring <span>efficient</span> and" +
+                    " reliable medication management.",
                 icon: "pill_icon.svg",
-                images: ["pill1.png", "pill2.png", "pill3.png"],
+                images: ["/pill1.svg", "/pill2.svg", "/pill3.svg"],
                 github: "https://github.com/DeividReinkeSchiitz/PillDispenser",
                 stacks: [
                     {
@@ -270,8 +286,15 @@ export default async function getStaticData() {
                     {
                         name: "Expo",
                         description: "Ecosystem of Tools",
-                        icon: "expo.svg",
+                        icon: "/expo.png",
                         color: "#000000"
+                    },
+
+                    {
+                        name: "Styled-Components",
+                        description: "CSS in JS",
+                        icon: "styled.svg",
+                        color: "#F456FF"
                     },
                     {
                         name: "CRUD",
@@ -279,20 +302,14 @@ export default async function getStaticData() {
                         icon: "crud.svg",
                         color: "#5C7CFA"
                     },
-                    {
-                        name: "Styled-Components",
-                        description: "CSS in JS",
-                        icon: "styled.svg",
-                        color: "#F456FF"
-                    },
                 ]
             },
             {
                 name: "Covid Data VIew",
-                description: "Unofficial App made during quarantine to see Covid  Statistics. Created \n" +
-                    "over a open source rapid api interface.",
-                icon: "",
-                images: ["covid1.png", "covid2.png", "covid3.png"],
+                description: "Unofficial App made during quarantine to see Covid <span>Statistics</span>. Created \n" +
+                    "over a <span>open source </span> rapid api interface.",
+                icon: "covid.svg",
+                images: ["/covid1.svg", "/covid2.svg", "/covid3.svg"],
                 github: "https://github.com/DeividReinkeSchiitz/covid-19",
                 stacks: [
                     {
@@ -309,8 +326,8 @@ export default async function getStaticData() {
                     }, {
                         name: "Expo",
                         description: "Ecosystem of Tools",
-                        icon: "expo.svg",
-                        color: "#000000"
+                        icon: "/expo.png",
+                        color: "#686868"
                     },
                     {
                         name: "CRUD",
@@ -324,21 +341,37 @@ export default async function getStaticData() {
         others: [
             {
                 name: "Structured C code",
-                description: "Creation of a well-structured C project that adheres to Unix-style. Logs, Test, error handler, bash scripts, bins, static and dynamic libraries, make files and Data Structures.",
+                description: "Foundation is crucial. Creation of a well-structured C project that adheres to Unix-style. Logs, Test, error handler, bash scripts, bins, static and dynamic libraries, make files and Data Structures.",
                 image: "c_code.svg",
-                stacks: ["C", "Unix", "Makefile", "Bash", "Data Structures", "Static Libraries", "Dynamic Libraries", "Logs", "Google Test", "Error Handler", "Valgrind", "GDB"]
+                stacks: ["C", "Unix", "Makefile", "Bash", "Data Structures", "Static Libraries", "Dynamic Libraries", "Logs", "Google Test", "Error Handler", "Valgrind", "GDB"],
+                live: "",
+                github: "https://github.com/DeividReinkeSchiitz/vm"
+            },
+        ],
+        social_medias: [
+            {
+                name: "LinkedIn",
+                description: "deividrs",
+                icon: "linkedin.svg",
+                link: "https://www.linkedin.com/in/deividrs/"
             },
             {
-                name: "Structured C code",
-                description: "Creation of a well-structured C project that adheres to Unix-style. Logs, Test, error handler, bash scripts, bins, static and dynamic libraries, make files and Data Structures.",
-                image: "c_code.svg",
-                stacks: ["C", "Unix", "Makefile", "Bash", "Data Structures", "Static Libraries", "Dynamic Libraries", "Logs", "Google Test", "Error Handler", "Valgrind", "GDB"]
+                name: "Instagram",
+                description: "_deivid.rs_",
+                icon: "instagram.svg",
+                link: "https://www.instagram.com/_deivid.rs_/"
             },
             {
-                name: "Structured C code",
-                description: "Creation of a well-structured C project that adheres to Unix-style. Logs, Test, error handler, bash scripts, bins, static and dynamic libraries, make files and Data Structures.",
-                image: "c_code.svg",
-                stacks: ["C", "Unix", "Makefile", "Bash", "Data Structures", "Static Libraries", "Dynamic Libraries", "Logs", "Google Test", "Error Handler", "Valgrind", "GDB"]
+                name: "GitHub",
+                description: "DeividReinkeSchiitz",
+                icon: "github.svg",
+                link: "https://github.com/DeividReinkeSchiitz"
+                },
+            {
+                name: "Email",
+                description: "deivid@schiitz.com",
+                icon: "email.svg",
+                link: "mailto:deivid@schiitz.com?subject=Hello&body=I%20wanted%20to%20reach%20out."
             }
         ]
     }
