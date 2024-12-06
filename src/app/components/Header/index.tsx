@@ -3,7 +3,7 @@
 import React from 'react'
 import Text from "@/app/components/Text";
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import {usePathname} from 'next/navigation'
 
 interface HeaderProps {
     className?: string;
@@ -17,31 +17,36 @@ function Header({className, style}: HeaderProps) {
         <div className={`flex text-white p-5 justify-center ${className}`} style={style}>
             <div className="flex w-full pt-3 pb-3 max-w-2xl items-center border-[#fafafa] border-[1px] rounded-2xl justify-evenly
             ">
-                <Text hover className={`sm:text-xl sm:p-2 hover:opacity-80 ${currentPath  =='/' && "text-[var(--blue)]"}`}>
-                    <Link href={"/"}>
+                <Link href={"/"}>
+                    <Text hover
+                          className={`sm:text-xl sm:p-2 hover:opacity-80 ${currentPath == '/' && "text-[var(--blue)]"}`}>
                         Home
-                    </Link>
-                </Text>
-                <Text hover className={`sm:text-xl sm:p-2 hover:opacity-80 ${currentPath =='/Websites' && "text-[var(--blue)]"}`}>
-                    <Link href={"/Websites"}>
+                    </Text>
+                </Link>
+                <Link href={"/Websites"}>
+                    <Text hover
+                          className={`sm:text-xl sm:p-2 hover:opacity-80 ${currentPath == '/Websites' && "text-[var(--blue)]"}`}>
                         Websites
-                    </Link>
-                </Text>
-                <Text hover className={`sm:text-xl sm:p-2 hover:opacity-80 ${currentPath == '/Mobiles' && "text-[var(--blue)]"}`}>
-                    <Link href={"/Mobiles"}>
+                    </Text>
+                </Link>
+                <Link href={"/Mobiles"}>
+                    <Text hover
+                          className={`sm:text-xl sm:p-2 hover:opacity-80 ${currentPath == '/Mobiles' && "text-[var(--blue)]"}`}>
                         Mobiles
-                    </Link>
-                </Text>
-                <Text hover className={`sm:text-xl sm:p-2 hover:opacity-80 ${currentPath == '/Others' && "text-[var(--blue)]"}`}>
-                    <Link href={"/Others"}>
+                    </Text>
+                </Link>
+                <Link href={"/Others"}>
+                    <Text hover
+                          className={`sm:text-xl sm:p-2 hover:opacity-80 ${currentPath == '/Others' && "text-[var(--blue)]"}`}>
                         Others
-                    </Link>
-                </Text>
-                <Text hover className={`sm:text-xl sm:p-2 hover:opacity-80 ${currentPath == '/Contact' && "text-[var(--blue)]"}`}>
-                    <Link href={"/Contact"}>
+                    </Text>
+                </Link>
+                <Link href={"/Contact"}>
+                    <Text hover
+                          className={`sm:text-xl sm:p-2 hover:opacity-80 ${currentPath == '/Contact' && "text-[var(--blue)]"}`}>
                         Contact
-                    </Link>
-                </Text>
+                    </Text>
+                </Link>
             </div>
         </div>
     )
