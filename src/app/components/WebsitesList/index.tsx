@@ -89,11 +89,11 @@ async function WebsitesList() {
                 </div>
 
                 {/*  TEXT SIDE  */}
-                <div className={`flex flex-col h-full z-10 items-center`}>
-                    <Text className={`text-2xl font-bold`}>
+                <div className={`flex text-left flex-col h-full z-10 ml-4`}>
+                    <Text className={`text-2xl font-bold `}>
                         {static_data.websites[i].name}
                     </Text>
-                    <Text className={`mt-2 text-center text-base justify-center ml-8 mr-8`}
+                    <Text className={`mt-2 text-base justify-center  mr-8`}
                           dangerouslySetInnerHTML={{__html: static_data.websites[i].description}}/>
                     {WebStacks(static_data.websites[i].stacks)}
                 </div>

@@ -94,7 +94,7 @@ export default async function getStaticData() {
                 color: "#3949AB"
             },
             {
-                name: "git",
+                name: "Git",
                 icon: "git.svg",
                 color: "#F4511E"
             }

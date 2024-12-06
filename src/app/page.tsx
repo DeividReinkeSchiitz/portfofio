@@ -8,7 +8,7 @@ export default function Home() {
           {/* TITLE */}
           <div className={`flex flex-col items-center justify-center flex-1`}>
               <Text className="text-xl">
-                  Hi, Im {" "}
+                  Hi, I am {" "}
                 <span>Deivid Reinke Schiitz</span>
               </Text>
 

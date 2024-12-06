@@ -5,7 +5,7 @@ import SocialMedias from "@/app/components/SocialMedias";
 
 export default function Contact() {
     return (
-        <div className="flex flex-col h-full w-full items-center justify-evenly max-h-[60vh]">
+        <div className="flex flex-col h-full w-full items-center justify-evenly max-h-[60vh] mt-10 ">
             {/* TITLE */}
             <div className={`flex items-center text-center justify-center flex-col max-w-2xl`}>
                 <div className="flex items-center justify-center mb-1">
@@ -26,9 +26,9 @@ export default function Contact() {
                 </Text>
 
                 <Text className={`text-center !text-xl md:text-xl mt-2 ml-10 mr-10 font-normal`}>
-                    If you&#39;d like to get in touch with me, feel free to
+                    If you&#39;d like to get in touch with me, feel free to {" "}
                     <span>reach me out </span> via LinkedIn, email,
-                    or any social media platform.
+                    or any <span>social media</span> platform.
                     I&#39;ll get back to you as soon as I can.
                 </Text>
             </div>

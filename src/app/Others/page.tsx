@@ -16,11 +16,11 @@ export default function Others() {
               />
               <Image
                   src={website_svg} alt="Website Projects"
-                  className={"absolute w-10 h-10 md:w-16 md:h-16 bottom-[-20px] md:bottom-[-80px] left-[-30px] "}
+                  className={"absolute w-10 h-10 md:w-16 md:h-16 bottom-[-20px] md:bottom-[-80px] right-10 md:right-0 "}
               />
               <Image
                   src={battery_svg} alt="Battery"
-                  className={"absolute w-10 h-10 md:w-16 md:h-16 bottom-20 md:top-[-40px] left-[-10px] "}
+                  className={"absolute w-10 h-10 md:w-16 md:h-16 bottom-20 md:top-[-45px] left-[0px] "}
               />
 
               <div className={`flex items-center justify-center  w-full`}>
@@ -29,9 +29,9 @@ export default function Others() {
                   </Text>
               </div>
 
-              <Text className={`text-center sm:text-xl mt-2 ml-10 mr-10 font-medium`}>
+              <Text className={`text-center sm:text-xl mt-2 ml-10 mr-10 font-medium max-w-xl`}>
                   I&#39;ve created <span>templates</span> and backend projects<br/>
-                  that truly <span>spark</span>my curiosity.Here are a few of my all-time<br/>
+                  that truly <span>spark</span> my curiosity. Here are a few of my all-time
                   favorites that I’m proud to share!
               </Text>
           </div>
