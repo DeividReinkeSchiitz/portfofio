@@ -1,6 +1,6 @@
 "use client"
 
-import React, {useEffect} from 'react'
+import React from 'react'
 import Text from "@/app/components/Text";
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -12,10 +12,6 @@ interface HeaderProps {
 
 function Header({className, style}: HeaderProps) {
     const currentPath = usePathname();
-
-    useEffect(() => {
-        console.log(currentPath)
-    }, [currentPath])
 
     return (
         <div className={`flex text-white p-5 justify-center ${className}`} style={style}>
