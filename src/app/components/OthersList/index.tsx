@@ -37,20 +37,6 @@ async function OthersList() {
                     className={"h-auto w-auto"}
                 />
 
-                {/*Link text*/}
-                {/*<div className={`flex w-full justify-evenly z-10 `}>*/}
-                {/*    <Text className={`flex justify-center items-center hover:underline`} hover>*/}
-                {/*        <Image src={"globe.svg"} alt={"globe"} width={5} height={5}*/}
-                {/*               className={"mr-2 w-5 h-5 md:w-7 md:h-7 "}/>*/}
-                {/*        Live Demo*/}
-                {/*    </Text>*/}
-                {/*    <Text className={`flex justify-center items-center hover:underline p-5`} hover>*/}
-                {/*        <Image src={"github.svg"} alt={"github"} width={6} height={6}*/}
-                {/*               className={"mr-2 w-6 h-6 md:w-7 md:h-7 "}/>*/}
-                {/*        Github*/}
-                {/*    </Text>*/}
-                {/*</div>*/}
-
                 {/*  TEXT SIDE  */}
                 <div className={`flex flex-col h-full items-baseline mt-8`}>
 

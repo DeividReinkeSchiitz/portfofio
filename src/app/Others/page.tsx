@@ -12,15 +12,15 @@ export default function Others() {
           <div className={`flex relative items-center text-center justify-center flex-col mt-10 mb-10`}>
               <Image
                   src={phone_svg} alt="Phone"
-                  className={"absolute w-10 h-10 md:w-16 md:h-16 top-[-38] right-10 md:right-0 "}
+                  className={"absolute w-10 h-10 md:w-16 md:h-16 top-[-38px] right-10 md:right-0 "}
               />
               <Image
                   src={website_svg} alt="Website Projects"
-                  className={"absolute w-10 h-10 md:w-16 md:h-16 bottom-[-20] md:bottom-[-80] left-[-30] "}
+                  className={"absolute w-10 h-10 md:w-16 md:h-16 bottom-[-20px] md:bottom-[-80px] left-[-30px] "}
               />
               <Image
                   src={battery_svg} alt="Battery"
-                  className={"absolute w-10 h-10 md:w-16 md:h-16 bottom-20 md:top-[-40] left-[-10] "}
+                  className={"absolute w-10 h-10 md:w-16 md:h-16 bottom-20 md:top-[-40px] left-[-10px] "}
               />
 
               <div className={`flex items-center justify-center  w-full`}>
