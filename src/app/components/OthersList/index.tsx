@@ -29,13 +29,13 @@ async function OthersList() {
         cur_projects.push(
             <div key={i} className={`flex flex-col self-start items-center max-w-[518px] p-10`}>
                 {/* IMAGE SIDE  */}
-                <div className={`flex h-full w-full max-h-[260] max-w-[430] border-2 `} style={{
+                <div className={`flex h-full w-full max-h-[260px] max-w-[430px] border-2 `} style={{
                         borderColor: static_data.others[i].color.length <= 7 ? static_data.others[i].color : "transparent",
                         borderImage: static_data.others[i].color.length > 7 ? static_data.others[i].color : "none"
                     }}>
                     <Image
-                        width={430}
-                        height={260}
+                        width={518}
+                        height={317}
                         src={static_data.others[i].image} alt={static_data.others[i].name}
                         className={"h-auto w-full "}
                     />
