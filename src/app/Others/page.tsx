@@ -7,9 +7,9 @@ import OthersList from "@/app/components/OthersList";
 
 export default function Others() {
   return (
-      <div className="flex flex-col items-center text-center justify-center ">
+      <div className="flex flex-col items-center text-center justify-center mt-48">
           {/* TITLE */}
-          <div className={`flex relative items-center text-center justify-center flex-col mt-10 mb-10`}>
+          <div className={`flex relative items-center text-center justify-center flex-col mb-10`}>
               <Image
                   src={phone_svg} alt="Phone"
                   className={"absolute w-10 h-10 md:w-16 md:h-16 top-[-38px] right-10 md:right-0 "}

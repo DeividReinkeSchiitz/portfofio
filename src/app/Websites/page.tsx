@@ -5,9 +5,9 @@ import WebsitesList from "@/app/components/WebsitesList";
 export default function Websites() {
 
   return (
-      <div className="flex flex-col items-center text-center justify-center ">
+      <div className="flex flex-col items-center text-center justify-center mt-48">
           {/* TITLE */}
-          <div className={`flex items-center text-center justify-center flex-col mt-10`}>
+          <div className={`flex items-center text-center justify-center flex-col`}>
               <div className={`flex items-center justify-center relative w-full`}>
                   <Text className="md:text-3xl sm:text-2xl font-bold ">
                       Website Projects

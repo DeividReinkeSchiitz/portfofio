@@ -6,9 +6,9 @@ import MobilesList from "@/app/components/MobilesList";
 
 export default function Mobiles() {
     return (
-        <div className="flex flex-col items-center text-center justify-center ">
+        <div className="flex flex-col items-center text-center justify-center mt-48">
             {/* TITLE */}
-            <div className={`flex relative items-center text-center justify-center flex-col mt-10 mb-10 max-w-xl`}>
+            <div className={`flex relative items-center text-center justify-center flex-col mb-10 max-w-xl`}>
                 {/*Phone Icon*/}
                 <Image
                     src={phone_svg} alt="Phone"

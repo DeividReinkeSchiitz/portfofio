@@ -39,7 +39,7 @@ async function SocialMedias({className}: SocialMediasProps) {
 
 
     return (
-        <div className={`p-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-5 gap-x-6  max-w-screen-lg ${className}`}>
+        <div className={`p-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6  max-w-screen-lg ${className}`}>
             {cur_medias}
         </div>
     )

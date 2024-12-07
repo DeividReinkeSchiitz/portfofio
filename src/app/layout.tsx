@@ -29,16 +29,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body className={`${raleway.variable} ${geistSans.variable} ${geistMono.variable} antialiased `}>
         <SquaresBack />
         <div className={`z-10 relative flex flex-col h-full w-full`}>
           <Header/>
-          {children}
+            {children}
         </div>
       </body>
     </html>

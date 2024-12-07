@@ -14,8 +14,9 @@ function Header({className, style}: HeaderProps) {
     const currentPath = usePathname();
 
     return (
-        <div className={`flex text-white p-5 justify-center ${className}`} style={style}>
-            <div className="flex w-full pt-3 pb-3 max-w-2xl items-center border-[#fafafa] border-[1px] rounded-2xl justify-evenly
+        // align itens in absolute component in center
+        <div className={`absolute w-full z-10 p-5 transform  ${className}`} style={style}>
+            <div className="flex w-full ml-auto mr-auto pt-3 pb-3 max-w-2xl items-center border-[#fafafa] border-[1px] rounded-2xl justify-evenly
             ">
                 <Link href={"/"}>
                     <Text hover
