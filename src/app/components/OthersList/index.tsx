@@ -34,8 +34,8 @@ async function OthersList() {
                         borderImage: static_data.others[i].color.length > 7 ? static_data.others[i].color : "none"
                     }}>
                     <Image
-                        width={518}
-                        height={317}
+                        width={430}
+                        height={260}
                         src={static_data.others[i].image} alt={static_data.others[i].name}
                         className={"h-auto w-full "}
                     />
