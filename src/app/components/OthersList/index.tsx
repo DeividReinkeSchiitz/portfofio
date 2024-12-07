@@ -26,26 +26,35 @@ async function OthersList() {
 
     for (let i = 0; i < static_data.others.length; i++) {
         cur_projects.push(
-            <div key={i} className={`flex flex-col max-w-[518px] p-10          
-            `}>
+            <div key={i} className={`flex flex-col max-w-[518px] p-10`}>
                 {/* IMAGE SIDE  */}
                 {/*Image*/}
-                <Image
-                    width={518}
-                    height={317}
-                    src={static_data.others[i].image} alt={static_data.others[i].name}
-                    className={"h-auto w-auto"}
-                />
-
+                <div className={" w-full h-full max-h-[260] rounded-md max-w-[430]"}>
+                    <Image
+                        width={518}
+                        height={317}
+                        src={static_data.others[i].image} alt={static_data.others[i].name}
+                        className={"h-auto w-auto object-fill "}
+                    />
+                </div>
                 {/*  TEXT SIDE  */}
                 <div className={`flex flex-col h-full items-baseline mt-8`}>
-
                     <div className={`flex w-full justify-between z-10 `}>
-                        <Text className={`text-2xl font-bold`}> {static_data.others[i].name}</Text>
+                        <div className={`flex items-center`}>
+                            <Image
+                                width={35}
+                                height={35}
+                                className={"h-[35px] w-[35px] mr-3"}
+                                src={static_data.others[i].icon} alt={static_data.others[i].name}/>
+
+                            <Text className={`text-2xl font-bold`}>
+                                {static_data.others[i].name}
+                            </Text>
+                        </div>
                         <div className={`flex justify-between gap-x-10 items-center`}>
                             {
                                 static_data.others[i].live &&
-                                <ClientDiv open={static_data.others[i].live}>
+                                <ClientDiv open={static_data.others[i].live} >
                                     <Text className={`flex justify-center items-center hover:underline`}
                                           hover>
                                         <Image src={"globe.svg"} alt={"globe"} width={5} height={5}

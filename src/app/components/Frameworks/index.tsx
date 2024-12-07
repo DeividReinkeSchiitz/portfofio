@@ -77,10 +77,6 @@ async function Frameworks() {
                 className={`w-[50%] h-[50%] absolute top-1/3 -right-[0%] opacity-10 filter blur-[100px] z-[-1]`}
                 style={{background: `radial-gradient(circle, ${static_data.frameworks[7].color} 20% 20%, transparent 50%)`,}}
             />
-
-            {/* RIGHT */}
-
-
         </div>
 
     )

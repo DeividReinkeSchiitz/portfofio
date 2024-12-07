@@ -21,11 +21,6 @@ export default function Home() {
                         Websites
                     </Text>
 
-                    <Text  className=" md:!text-6xl !text-4xl text-center font-bold">
-                    </Text>
-
-
-
                     {/* DOWNLOAD RESUME */}
                     <DownResume className={""}/>
                 </div>

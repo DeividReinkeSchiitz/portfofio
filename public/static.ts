@@ -343,10 +343,21 @@ export default async function getStaticData() {
                 name: "Structured C code",
                 description: "Foundation is crucial. Creation of a well-structured C project that adheres to Unix-style. Logs, Test, error handler, bash scripts, bins, static and dynamic libraries, make files and Data Structures.",
                 image: "c_code.svg",
+                icon: "c.svg",
                 stacks: ["C", "Unix", "Makefile", "Bash", "Data Structures", "Static Libraries", "Dynamic Libraries", "Logs", "Google Test", "Error Handler", "Valgrind", "GDB"],
                 live: "",
                 github: "https://github.com/DeividReinkeSchiitz/vm"
             },
+            {
+                name: "Comportc",
+                description: `This software is built using Electron and a C++ library with Node.js native addons. It allows for reading and writing to a serial COM port, similar to the Arduino IDE’s monitor, but it is not integrated. It is useful for testing software on ARM, Arduino, and ESP devices.`,
+                image: "/comportc.png",
+                icon: "/comportc_icon.png",
+                stacks: ["C++", "Node.js", "Electron", "Node Addons", "Windows", "Hardware"],
+                live: "https://github.com/DeividReinkeSchiitz/Comportc/releases/tag/v1.2.2",
+                github: "https://github.com/DeividReinkeSchiitz/Comportc"
+            }
+
         ],
         social_medias: [
             {
