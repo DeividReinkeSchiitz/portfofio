@@ -30,7 +30,7 @@ export default function Others() {
               </div>
 
               <Text className={`text-center sm:text-xl mt-2 ml-10 mr-10 font-medium max-w-xl`}>
-                  I&#39;ve created <span>templates</span> and backend projects<br/>
+                  I&#39;ve created <span>templates</span> and backend projects
                   that truly <span>spark</span> my curiosity. Here are a few of my all-time
                   favorites that I’m proud to share!
               </Text>

@@ -17,10 +17,13 @@ export default function Contact() {
                                width={4} height={4}
                                className={"w-4 h-4 mr-1"}
                         />
-                        <Text className="text-sm font-bold ">
-                            Based in {" "}
-                            <span>Brazil</span>
+                        <Text className="text-sm font-normal">
+                            Based in {" "} <span>Brazil</span> | Remote <span>Worldwide</span>
                         </Text>
+                            <Image src={"globe_g.svg"} alt={"location"}
+                                   width={4} height={4}
+                                   className={"w-4 h-4 ml-1"}
+                            />
                     </div>
 
                     <Text

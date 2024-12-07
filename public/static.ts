@@ -46,6 +46,7 @@ export interface Other {
     stacks: string[]
     live: string
     github: string
+    color: string
 }
 
 export interface SocialMedia {
@@ -249,9 +250,9 @@ export default async function getStaticData() {
                 ]
             },
             {
-                name: "Pill DIspenser",
-                description: "The Pill Dispenser Medication App is a <span>server-side</span> project built on a" +
-                    "<span> real-time Firebase backend </span>. It is designed to integrate " +
+                name: "Pill Dispenser",
+                description: "The Pill Dispenser Medication App is a <span>Mobile</span> project built on a" +
+                    "<span> Firebase Function </span> backend. It is designed to integrate " +
                     "seamlessly with <span>hardware</span> dispensers powered by" +
                     " ESP32, Arduino, or ARM processors, ensuring <span>efficient</span> and" +
                     " reliable medication management.",
@@ -342,21 +343,54 @@ export default async function getStaticData() {
             {
                 name: "Structured C code",
                 description: "Foundation is crucial. Creation of a well-structured C project that adheres to Unix-style. Logs, Test, error handler, bash scripts, bins, static and dynamic libraries, make files and Data Structures.",
-                image: "c_code.svg",
+                image: "/c_code.png",
                 icon: "c.svg",
-                stacks: ["C", "Unix", "Makefile", "Bash", "Data Structures", "Static Libraries", "Dynamic Libraries", "Logs", "Google Test", "Error Handler", "Valgrind", "GDB"],
+                stacks: ["C", "Unix", "Backend", "Makefile", "Bash", "Data Structures", "Static Libraries", "Dynamic Libraries", "Logs", "Google Test", "Error Handler", "Valgrind", "GDB"],
                 live: "",
-                github: "https://github.com/DeividReinkeSchiitz/vm"
+                github: "https://github.com/DeividReinkeSchiitz/vm",
+                color:"#00C7FF",
             },
             {
                 name: "Comportc",
                 description: `This software is built using Electron and a C++ library with Node.js native addons. It allows for reading and writing to a serial COM port, similar to the Arduino IDE’s monitor, but it is not integrated. It is useful for testing software on ARM, Arduino, and ESP devices.`,
                 image: "/comportc.png",
                 icon: "/comportc_icon.png",
-                stacks: ["C++", "Node.js", "Electron", "Node Addons", "Windows", "Hardware"],
+                stacks: ["C++", "Node.js", "Electron", "Node Addons", "Windows", "Hardware", "Npm Package"],
                 live: "https://github.com/DeividReinkeSchiitz/Comportc/releases/tag/v1.2.2",
-                github: "https://github.com/DeividReinkeSchiitz/Comportc"
-            }
+                github: "https://github.com/DeividReinkeSchiitz/Comportc",
+                color: "#7F6FED"
+            },
+            {
+                name: "Firebase Functions Template",
+                description: `Firebase Functions template includes the necessary setup for writing, deploying, and testing serverless functions. It uses the Cloud Functions for Firebase SDK to handle events triggered by Firebase services`,
+                image: "/firebase.png",
+                icon: "firebase.svg",
+                stacks: ["Firebase", "Javascript", "Controller", "Authentication", "CRUD"],
+                live: "",
+                github: "https://github.com/DeividReinkeSchiitz/FirebaseFunctionsTemplate",
+                color: "#FF8F00"
+            },
+            {
+                name: "Postgres Node.js Template",
+                description: `This template provides a structure for a Node.js application that connects to a PostgreSQL database using the pg library. It includes basic CRUD operations, an environment configuration setup, and a lightweight structure for scalability.`,
+                image: "/sql_node.svg",
+                icon: "postgres.svg",
+                stacks: ["Postgres", "Node.js", "javascript", "Backend", "PG", "Express", "CRUD", "Environment", "sequelize"],
+                live: "",
+                github: "https://github.com/DeividReinkeSchiitz/FirebaseFunctionsTemplate",
+                color: "linear-gradient(to right, #3C873A  0%, #008BB9 100%) 1"
+            },
+
+            {
+                name: "Window NPM Package",
+                description: `An NPM pacage built with a Node.js addon written in C++ that integrates functionalities from the Windows API (windows.h). This package provides tools for advanced Windows system manipulation, including posting messages, writing values to memory, capturing screenshots, moving the mouse, setting windows to the foreground, and more.`,
+                image: "npm_back.svg",
+                icon: "npm.svg",
+                stacks: ["C++", "Node.js", "Node Addons", "NPM Package", "Memory", "Window Manipulation"],
+                live: "https://www.npmjs.com/package/windowcpp",
+                github: "",
+                color: "#D50000"
+            },
 
         ],
         social_medias: [
