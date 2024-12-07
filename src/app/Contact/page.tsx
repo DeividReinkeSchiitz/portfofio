@@ -6,12 +6,12 @@ import RadiusBlur from "@/app/Contact/RadiusBlur";
 
 export default function Contact() {
     return (
-        <div className="relative h-full w-full items-center overflow-hidden">
+        <div className=" relative h-full w-full items-center overflow-hidden">
             <div className="flex flex-col h-full w-full items-center  justify-evenly">
                 <RadiusBlur/>
 
                 {/* TITLE */}
-                <div className={`flex w-full items-center text-center justify-center flex-col max-w-2xl `}>
+                <div className={`mt-20 flex w-full items-center text-center justify-center flex-col max-w-2xl `}>
                     <div className="flex items-center justify-center mb-1">
                         <Image src={"location.svg"} alt={"location"}
                                width={4} height={4}

@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Home() {
     return (
-        <div className="relative  flex-col self-center items-center justify-center w-full h-full">
+        <div className="relative mt-48 flex-col self-center items-center justify-center w-full h-full">
             <div className="flex flex-col items-center justify-center w-full h-full">
                 {/* TITLE */}
                 <div className={`flex flex-col items-center justify-center flex-1 font-light`}>
