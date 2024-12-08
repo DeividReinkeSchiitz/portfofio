@@ -383,7 +383,7 @@ export default async function getStaticData() {
 
             {
                 name: "Window NPM Package",
-                description: `An NPM pacage built with a Node.js addon written in C++ that integrates functionalities from the Windows API (windows.h). This package provides tools for advanced Windows system manipulation, including posting messages, writing values to memory, capturing screenshots, moving the mouse, setting windows to the foreground, and more.`,
+                description: `An NPM package built with a Node.js addon written in C++ that integrates functionalities from the Windows API (windows.h). This package provides tools for advanced Windows system manipulation, including posting messages, writing values to memory, capturing screenshots, moving the mouse, setting windows to the foreground, and more.`,
                 image: "npm_back.svg",
                 icon: "npm.svg",
                 stacks: ["C++", "Node.js", "Node Addons", "NPM Package", "Memory", "Window Manipulation"],
