@@ -45,7 +45,7 @@ function SquaresBack() {
     }
 
     return (
-        <div className="absolute grid grid-cols-10 w-full h-screen z-0 inset-0">
+        <div className="absolute grid grid-cols-10 w-full h-screen z-0 inset-0 overflow-hidden ">
             {squares}
         </div>
     );
