@@ -5,7 +5,7 @@ const Gtag = () => {
     // <!-- Google tag (gtag.js) -->
     return <div>
         {/*// <!-- Google tag (gtag.js) -->*/}
-        <Script strategy="lazyOnload" async src="https://www.googletagmanager.com/gtag/js?id=G-NKTQ32HPT2"/>
+        <Script strategy="lazyOnload" async={true} src="https://www.googletagmanager.com/gtag/js?id=G-NKTQ32HPT2"/>
         <Script strategy="lazyOnload" id={"gtag"}
         >
             {
