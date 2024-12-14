@@ -39,7 +39,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${raleway.variable} ${geistSans.variable} ${geistMono.variable} antialiased `}>
       <Gtag/>
-
       <SquaresBack />
         <div className={`z-10 relative flex flex-col h-full w-full overflow-auto`}>
           <Header/>
