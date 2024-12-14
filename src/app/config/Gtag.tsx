@@ -5,12 +5,13 @@ import ReactGA from 'react-ga4';
 import {usePathname} from "next/navigation";
 
 const TRACKING_ID = "G-NKTQ32HPT2";
+// const TRACKING_ID= "GT-PHX54G7Q";
 function Gtag () {
     const currentPath = usePathname();
     const [initialized, setInitialized] = useState(false);
 
     useEffect(() => {
-        ReactGA.initialize(TRACKING_ID);
+        ReactGA.initialize(TRACKING_ID, {testMode: true});
         setInitialized(true);
     }, []);
 
