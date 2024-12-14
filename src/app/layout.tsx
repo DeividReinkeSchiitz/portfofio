@@ -4,6 +4,7 @@ import "./globals.css";
 import SquaresBack from "@/app/components/SquaresBack";
 import Header from "@/app/components/Header";
 import React from "react";
+import Gtag from "@/app/config/Gtag";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,6 +28,8 @@ export const metadata: Metadata = {
   description: "Deivid Reinke Schiitz Personal Website",
 };
 
+
+
 export default function RootLayout({
   children,
 }: {
@@ -35,7 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${raleway.variable} ${geistSans.variable} ${geistMono.variable} antialiased `}>
-        <SquaresBack />
+      <Gtag/>
+
+      <SquaresBack />
         <div className={`z-10 relative flex flex-col h-full w-full overflow-auto`}>
           <Header/>
             {children}
