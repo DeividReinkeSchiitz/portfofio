@@ -9,7 +9,6 @@ const Gtag = () => {
         ReactGA.send({ hitType: "pageview", page: "/", title: "Home Page" });
     }, [])
 
-
     // <!-- Google tag (gtag.js) -->
     // return <div>
     //     {/*// <!-- Google tag (gtag.js) -->*/}
@@ -25,5 +24,6 @@ const Gtag = () => {
     //         }
     //     </Script>
     // </div>
+    return <></>
 }
 export default Gtag;
