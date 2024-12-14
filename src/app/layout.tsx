@@ -4,7 +4,10 @@ import "./globals.css";
 import SquaresBack from "@/app/components/SquaresBack";
 import Header from "@/app/components/Header";
 import React from "react";
-import Gtag from "@/app/config/Gtag";
+import ReactGA from "react-ga4";
+
+const TRACKING_ID = "G-NKTQ32HPT2";
+ReactGA.initialize(TRACKING_ID);
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,8 +32,6 @@ export const metadata: Metadata = {
 };
 
 
-
-
 export default function RootLayout({
   children,
 }: {
@@ -39,7 +40,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${raleway.variable} ${geistSans.variable} ${geistMono.variable} antialiased `}>
-      <Gtag/>
       <SquaresBack />
         <div className={`z-10 relative flex flex-col h-full w-full overflow-auto`}>
           <Header/>
