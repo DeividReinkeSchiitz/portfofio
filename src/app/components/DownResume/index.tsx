@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 // import Download from public
 import Text from "@/app/components/Text";
+import ReactGA from "react-ga4";
 
 interface DownResumeProps {
     className?: string;
@@ -12,6 +13,12 @@ interface DownResumeProps {
 function DownResume ({className, ...rest}: DownResumeProps) {
 
     const openDownloadUrl = () => {
+        ReactGA.event({
+            category: "Resume",
+            action: "Download",
+            label: "Resume Download", // Optional, describes the event
+        });
+
         window.open("https://raw.githubusercontent.com/DeividReinkeSchiitz/DeividReinkeSchiitz.github.io/refs/heads/master/resume.pdf")
     }
 

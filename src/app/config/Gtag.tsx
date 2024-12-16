@@ -11,7 +11,7 @@ function Gtag () {
     const [initialized, setInitialized] = useState(false);
 
     useEffect(() => {
-        ReactGA.initialize(TRACKING_ID, {testMode: true});
+        ReactGA.initialize(TRACKING_ID);
         setInitialized(true);
     }, []);
 
