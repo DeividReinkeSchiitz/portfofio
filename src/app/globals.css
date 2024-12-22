@@ -6,9 +6,13 @@
   --text-white: #fafafa;
   --blue: #00C7FF;
   --blue-RGB: 0, 199, 255;
-  --background: #ffffff;
+/*  --background: #ffffff;
   --foreground: #171717;
-}
+*/
+--background: #0a0a0a;
+--foreground: #ededed;
+
+  }
 
 @media (prefers-color-scheme: dark) {
   :root {
